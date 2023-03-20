@@ -123,12 +123,10 @@ onMounted(function () {
   setInterval(() => {
     img1.value.classList.add("move_y");
     img2.value.classList.add("move_x");
-    console.log("moving + dir");
   }, 1000);
   setInterval(() => {
     img1.value.classList.remove("move_y");
     img2.value.classList.remove("move_x");
-    console.log("moving - dir");
   }, 3000);
 });
 </script>
