@@ -5,7 +5,6 @@
         TRIPLEHELIX Assocition Nigeria Actors
       </h1>
       <div class="tha_actors">
-        <h4 class="fw-bold text-center">Oops!</h4>
         <h4 class="text-center fw-bold">
           There are no THA Actors listed for now, please check back soon
         </h4>
@@ -29,6 +28,7 @@ export default {};
   align-items: center;
 }
 .tha_actors {
+  padding: 10px;
   margin-top: 2rem;
   height: 7rem;
   width: 30rem;

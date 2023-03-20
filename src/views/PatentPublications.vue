@@ -28,6 +28,7 @@ export default {};
   align-items: center;
 }
 .patent-publications {
+  padding: 10px;
   margin-top: 2rem;
   height: 7rem;
   width: 30rem;

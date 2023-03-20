@@ -115,7 +115,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const photos = ["Slide3.webp", "Slide2.webp", "Slide6.webp"];
+const photos = ["Slide1.webp", "Slide2.webp", "Slide3.webp"];
 
 const img1 = ref("");
 const img2 = ref("");
