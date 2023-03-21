@@ -16,17 +16,16 @@
           style="font-size: 1.25rem; margin-left: 3px"
         ></i>
         <a href="#" class="text-decoration-none ps-2 fw-bold"
-          >support@company.com</a
+          >thanigeia@company.com</a
         >
       </div>
     </section>
     <section class="section__2 fw-bolder">
-      <h5 class="fw-bold">Triple helix Association Nigeria Chapter</h5>
+      <h5 class="fw-bold">THA Nigeria Chapter</h5>
       <p class="fw-normal">
         Nigeria, having fulfilled all the requirement to establish a chapter to
-        operationalize the Triple Helix Model, will at the end of the day, be
-        considered latest addition to the league Triple Helix Chapter under the
-        African region.
+        operationalize the Triple Helix Model, is the latest addition to the
+        league Triple Helix Chapter under the African region.
       </p>
       <div class="icons">
         <a href="#"><i class="bi bi-facebook"></i></a>
@@ -44,26 +43,33 @@ export default {};
 
 <style scoped>
 .footer {
-  height: 12rem;
-  width: 93.5vw;
+  height: 28rem;
+  width: 100%;
+  background-color: #2b352ff8;
   color: #fff;
-  margin: 1.5rem 2rem 0.5rem 2rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  border-top: 1px solid #fff;
 }
 
 .section__1 {
   flex-basis: 50%;
-  align-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 .section__2 {
   flex-basis: 50%;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
-
+.section__2 h5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .icons .bi {
   font-size: 1.25rem;
   color: #fff;
@@ -73,7 +79,13 @@ export default {};
 .address,
 .phone,
 .mail {
-  margin: 20px;
+  margin: 1rem;
 }
-/* style="font-size: 2rem; color: cornflowerblue; */
+@media screen and (max-width: 530px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 </style>
