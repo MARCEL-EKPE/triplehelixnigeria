@@ -12,12 +12,8 @@
           pauseOnMouseEnter: true,
         }"
       >
-        <!-- <SwiperSlide v-for="photo in photos" :key="photo">
-          <img :src="`src/assets/${photo}`" alt="slide photo" />
-        </SwiperSlide>
-      </Swiper> -->
         <SwiperSlide v-for="photo in photos" :key="photo">
-          <img src="../assets/slide3.webp" alt="" />
+          <img :src="`src/assets/${photo}`" alt="slide photo" />
         </SwiperSlide>
       </Swiper>
     </div>
