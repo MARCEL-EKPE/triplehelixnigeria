@@ -134,7 +134,7 @@ i {
 }
 @media screen and (max-width: 1100px) {
   .nav {
-    height: 7rem;
+    height: 6.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,23 +143,23 @@ i {
     display: none;
   }
   .logo {
-    flex-basis: 85%;
+    flex-basis: 75%;
   }
   .tha_logo {
-    height: 5.5rem;
+    height: 5rem;
     width: 7rem;
   }
   .bars {
     display: block;
-    flex-basis: 15%;
+    flex-basis: 25%;
     margin-bottom: 1rem;
   }
   .one,
   .two,
   .three {
-    width: 50px;
+    width: 35px;
     height: 3px;
-    margin: 10px;
+    margin: 5px;
   }
 }
 </style>

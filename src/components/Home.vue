@@ -304,7 +304,8 @@ onMounted(function () {
 
 @media screen and (max-width: 1100px) {
   .slider {
-    height: 25rem;
+    height: 18rem;
+    width: 100%;
   }
   .welcome__tha {
     height: 19rem;
@@ -339,9 +340,8 @@ onMounted(function () {
     width: 100%;
   }
   .img__sponsors {
-    height: 16rem;
+    height: 8rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
