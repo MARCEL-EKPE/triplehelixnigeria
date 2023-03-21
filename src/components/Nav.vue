@@ -8,7 +8,7 @@
         class="tha_logo"
       />
     </div>
-    <div class="nav_search_div position-relative">
+    <div class="nav_search_div position-relative" ref="nav">
       <div class="input-group p-3 position-absolute top-0 end-0">
         <input
           type="search"
@@ -34,9 +34,9 @@
         >
       </ul>
     </div>
-    <div class="bars">
+    <div class="bars" ref="bars" @click="clickHandler">
       <div class="one"></div>
-      <div class="two"></div>
+      <div class="two display-none" ref="two"></div>
       <div class="three"></div>
     </div>
   </div>
@@ -48,6 +48,15 @@ import { ref, onMounted } from "vue";
 
 function homeView() {
   router.push("/");
+}
+
+const nav = ref(null);
+const bars = ref(null);
+const two = ref(null);
+
+function clickHandler() {
+  two.value.classList.add("display-none");
+  console.log("clicked");
 }
 </script>
 
@@ -132,6 +141,13 @@ i {
   background-color: #fff;
   margin: 8px;
 }
+/* navigation on small screen */
+.diplay-none {
+  background-color: #000000;
+}
+.display-block {
+  display: block;
+}
 @media screen and (max-width: 1100px) {
   .nav {
     height: 6.5rem;
@@ -178,13 +194,14 @@ i {
     display: block;
     flex-basis: 22%;
     margin-bottom: 0rem;
+    cursor: pointer;
   }
   .one,
   .two,
   .three {
     width: 35px;
     height: 3px;
-    margin: 5px;
+    margin: 8px;
   }
 }
 </style>
