@@ -70,7 +70,7 @@ function homeView() {
 }
 .tha_logo {
   width: 150px;
-  margin-left: 25px;
+  margin-left: 10px;
   background-color: #fff;
 }
 .nav_search_div {
@@ -153,6 +153,31 @@ i {
     display: block;
     flex-basis: 25%;
     margin-bottom: 1rem;
+  }
+  .one,
+  .two,
+  .three {
+    width: 35px;
+    height: 3px;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav {
+    height: 6rem;
+  }
+  .logo {
+    flex-basis: 78%;
+  }
+  .tha_logo {
+    height: 4.5rem;
+    width: 5rem;
+  }
+  .bars {
+    display: block;
+    flex-basis: 22%;
+    margin-bottom: 0rem;
   }
   .one,
   .two,

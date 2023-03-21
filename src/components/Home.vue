@@ -74,7 +74,7 @@
           <img src="../assets/w-w-a..webp" alt="" />
         </div>
       </div>
-      <div class="tha_nigeria mt-4 p-3">
+      <div class="tha_nigeria mt-3 p-3">
         <h4 class="fw-bold text-center text-success display-6">
           Triple Helix Association - Nigeria
         </h4>
@@ -304,11 +304,11 @@ onMounted(function () {
 
 @media screen and (max-width: 1100px) {
   .slider {
-    height: 18rem;
+    height: 25rem;
     width: 100%;
   }
   .welcome__tha {
-    height: 19rem;
+    height: 22rem;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -321,15 +321,13 @@ onMounted(function () {
   }
 
   .home__content {
-    height: 89rem;
+    height: 70rem;
     padding: 1rem;
   }
   .who_we_are {
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
   }
 
@@ -352,6 +350,19 @@ onMounted(function () {
   .img__sponsors .ccl-logo {
     width: 7rem;
     height: 1.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .home__content {
+    justify-content: space-around;
+    height: 90rem;
+    width: 100%;
+  }
+  .who_we_are {
+    margin: 0;
+  }
+  .img__sponsors {
+    height: 12rem;
   }
 }
 </style>
