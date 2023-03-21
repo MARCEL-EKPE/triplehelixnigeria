@@ -5,11 +5,11 @@
         src="../assets/logo.webp"
         alt=""
         @click="homeView"
-        class="THA__logo"
+        class="tha_logo"
       />
     </div>
     <div class="nav_search_div position-relative">
-      <div class="input-group w-50 p-3 position-absolute top-0 end-0">
+      <div class="input-group p-3 position-absolute top-0 end-0">
         <input
           type="search"
           class="form-control border border-success"
@@ -34,6 +34,11 @@
         >
       </ul>
     </div>
+    <div class="bars">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
   </div>
 </template>
 
@@ -51,16 +56,25 @@ function homeView() {
   display: flex;
   position: relative;
   align-content: center;
+  justify-content: space-around;
   padding: 0.5rem;
   height: 9rem;
-  width: 98.6%;
+  width: 100%;
   margin: auto;
 }
 .logo {
   flex-basis: 30%;
 }
+.logo h3 {
+  font-weight: 900;
+}
+.tha_logo {
+  width: 150px;
+  margin-left: 25px;
+  background-color: #fff;
+}
 .nav_search_div {
-  flex-basis: 70%;
+  flex-basis: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -71,8 +85,8 @@ function homeView() {
   align-content: center;
   list-style-type: none;
   position: absolute;
-  top: 5rem;
-  right: 0.5rem;
+  top: 5.8rem;
+  right: 0;
   width: 70%;
 }
 .link {
@@ -85,13 +99,8 @@ function homeView() {
   font-size: 1.025rem;
 }
 
-.logo h3 {
-  font-weight: 900;
-}
-.THA__logo {
-  width: 150px;
-  margin-left: 25px;
-  background-color: #fff;
+.input-group-text:hover {
+  background-color: #788249;
 }
 .input-group-text,
 i {
@@ -102,5 +111,53 @@ i {
   background-image: linear-gradient(230deg, #cbb260, #788d63);
   border-radius: 10px;
   padding: 3px;
+}
+.input-group {
+  width: 21rem;
+  margin-left: 2rem;
+}
+.form-control {
+  height: 2.8rem;
+}
+.bars {
+  height: 30px;
+  width: 40px;
+  display: none;
+}
+.one,
+.two,
+.three {
+  height: 5px;
+  width: 40px;
+  background-color: #fff;
+  margin: 8px;
+}
+@media screen and (max-width: 1100px) {
+  .nav {
+    height: 7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav_search_div {
+    display: none;
+  }
+  .logo {
+    flex-basis: 85%;
+  }
+  .tha_logo {
+    height: 5.5rem;
+    width: 7rem;
+  }
+  .bars {
+    display: block;
+    flex-basis: 15%;
+    align-items: center;
+  }
+  .one,
+  .two,
+  .three {
+    margin: 8px;
+  }
 }
 </style>

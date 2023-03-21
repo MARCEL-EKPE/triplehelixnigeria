@@ -19,8 +19,7 @@
     </div>
     <!-- my content -->
     <div class="welcome__tha">
-      <div class="message">
-        <!-- <h3 class="fst-italic fw-bold">welcome</h3> -->
+      <div class="msg">
         <p class="tiplehelix">
           <span class="red">TRIPLEHELIX ASSOCIATION</span>
           <span class="green">NIGERIA CHAPTER</span>
@@ -39,7 +38,7 @@
         </button>
       </div>
 
-      <div class="welcome-img-div">
+      <div class="msg-img-div">
         <img
           src="../assets/abt3.webp"
           alt=""
@@ -159,11 +158,16 @@ onMounted(function () {
   background-repeat: no-repeat;
   position: relative;
 }
-.message {
-  flex-basis: 38%;
+.msg {
+  flex-basis: 50%;
+  margin: 2.5rem;
+}
+.msg-img-div {
+  flex-basis: 50%;
 }
 .tha_model {
-  flex-basis: 62%;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .welcome__img1 {
@@ -279,5 +283,53 @@ onMounted(function () {
 .moveOppx {
   transform: translate(-20px, 0px);
   transition: 3s;
+}
+
+@media screen and (max-width: 1175px) {
+  .welcome__tha {
+    display: flex;
+    justify-content: center;
+  }
+  .msg {
+    margin-left: 1rem;
+    flex-basis: 40%;
+  }
+  .msg-img-div {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .welcome__tha {
+    height: 17rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .welcome__img1,
+  .welcome__img2 {
+    display: none;
+  }
+
+  .home__content {
+    height: 100%;
+  }
+  .who_we_are {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .who_we_are .right {
+    width: 100%;
+  }
+  .who_we_are .right img {
+    width: 80%;
+  }
+  .img__sponsors img {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 </style>
