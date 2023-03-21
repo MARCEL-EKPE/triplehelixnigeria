@@ -136,7 +136,7 @@ i {
   .nav {
     height: 7rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
   .nav_search_div {
@@ -152,12 +152,14 @@ i {
   .bars {
     display: block;
     flex-basis: 15%;
-    align-items: center;
+    margin-bottom: 1rem;
   }
   .one,
   .two,
   .three {
-    margin: 8px;
+    width: 50px;
+    height: 3px;
+    margin: 10px;
   }
 }
 </style>

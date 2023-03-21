@@ -55,7 +55,7 @@
     </div>
 
     <section class="home__content" id="section3">
-      <div class="who_we_are">
+      <div class="who_we_are mt-2">
         <div class="left">
           <h4 class="fw-bold text-success display-6">who we are</h4>
           <p>
@@ -74,7 +74,7 @@
           <img src="../assets/w-w-a..webp" alt="" />
         </div>
       </div>
-      <div class="tha_nigeria mt-3">
+      <div class="tha_nigeria mt-4 p-3">
         <h4 class="fw-bold text-center text-success display-6">
           Triple Helix Association - Nigeria
         </h4>
@@ -222,14 +222,16 @@ onMounted(function () {
 
 /* who we are */
 .home__content {
-  height: 52rem;
+  height: 55rem;
   width: 100%;
-  padding: 5rem;
+  padding: 2rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
 }
 .who_we_are {
+  margin-top: 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -250,7 +252,8 @@ onMounted(function () {
   background-size: contain;
 }
 .img__sponsors {
-  margin-top: 2rem;
+  margin-top: 0rem;
+  height: 12rem;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -300,8 +303,12 @@ onMounted(function () {
 }
 
 @media screen and (max-width: 1100px) {
+  .slider {
+    height: 25rem;
+  }
   .welcome__tha {
-    height: 17rem;
+    height: 19rem;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -313,19 +320,30 @@ onMounted(function () {
   }
 
   .home__content {
-    height: 100%;
+    height: 89rem;
+    padding: 1rem;
   }
   .who_we_are {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
   }
+
   .who_we_are .right {
-    width: 100%;
+    flex-basis: 100%;
   }
   .who_we_are .right img {
-    width: 80%;
+    width: 100%;
+  }
+  .img__sponsors {
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
   .img__sponsors img {
     width: 5rem;
