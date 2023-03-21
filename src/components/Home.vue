@@ -339,15 +339,19 @@ onMounted(function () {
     width: 100%;
   }
   .img__sponsors {
-    height: 28rem;
+    height: 16rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
   .img__sponsors img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .img__sponsors .ccl-logo {
+    width: 7rem;
+    height: 1.5rem;
   }
 }
 </style>
