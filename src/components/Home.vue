@@ -252,7 +252,6 @@ onMounted(function () {
   background-size: contain;
 }
 .img__sponsors {
-  margin-top: 0rem;
   height: 12rem;
   width: 100%;
   display: flex;
@@ -321,7 +320,7 @@ onMounted(function () {
   }
 
   .home__content {
-    height: 70rem;
+    height: 73rem;
     padding: 1rem;
   }
   .who_we_are {
@@ -355,14 +354,20 @@ onMounted(function () {
 @media screen and (max-width: 650px) {
   .home__content {
     justify-content: space-around;
-    height: 90rem;
+    height: 55rem;
     width: 100%;
   }
   .who_we_are {
     margin: 0;
   }
   .img__sponsors {
-    height: 12rem;
+    margin: 0;
+    height: 8rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .home__content {
+    height: 108rem;
   }
 }
 </style>
