@@ -13,7 +13,7 @@
         }"
       >
         <SwiperSlide v-for="photo in photos" :key="photo">
-          <img :src="`../src/assets/${photo}`" alt="slide photo" />
+          <img :src="`./src/assets/${photo}`" alt="slide photo" />
         </SwiperSlide>
       </Swiper>
     </div>
