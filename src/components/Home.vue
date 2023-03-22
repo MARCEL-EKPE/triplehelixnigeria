@@ -370,7 +370,7 @@ onMounted(function () {
 
 @media screen and (max-width: 480px) {
   .silder {
-    height: 18rem;
+    height: 11rem;
     width: 100%;
   }
   .home__content {
