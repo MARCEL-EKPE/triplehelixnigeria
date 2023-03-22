@@ -352,10 +352,12 @@ onMounted(function () {
   }
 }
 @media screen and (max-width: 650px) {
-  .home__content {
-    justify-content: space-around;
-    height: 55rem;
+  .silder {
+    height: 22rem;
     width: 100%;
+  }
+  .home__content {
+    height: 80rem;
   }
   .who_we_are {
     margin: 0;
@@ -365,9 +367,14 @@ onMounted(function () {
     height: 8rem;
   }
 }
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 480px) {
+  .silder {
+    height: 18rem;
+    width: 100%;
+  }
   .home__content {
-    height: 108rem;
+    height: 105rem;
   }
 }
 </style>
