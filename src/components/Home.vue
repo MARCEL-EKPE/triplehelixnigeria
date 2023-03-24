@@ -110,19 +110,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const photos = ["web1.webp", "web2.webp", "web3.webp"];
-
-const img1 = ref("");
-const img2 = ref("");
-onMounted(function () {
-  setInterval(() => {
-    img1.value.classList.add("move_y");
-    img2.value.classList.add("move_x");
-  }, 1000);
-  setInterval(() => {
-    img1.value.classList.remove("move_y");
-    img2.value.classList.remove("move_x");
-  }, 3000);
-});
 </script>
 
 <style scoped>
@@ -135,12 +122,12 @@ onMounted(function () {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: url("../assets/img3.webp");
+  background: url("../assets/web10.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .swiper-slide img {
-  padding: 3.125rem;
+  padding: 2rem;
   height: 100%;
   width: 100%;
 }
