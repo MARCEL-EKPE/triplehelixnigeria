@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="null-div"></div>
-      <img src="../assets/Reineur slide.webp" alt="" class="footer-slide" />
+      <img src="../assets/footerImg.webp" alt="" class="footer-slide" />
     </section>
   </div>
 </template>
