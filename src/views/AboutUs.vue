@@ -2,7 +2,7 @@
   <div>
     <div class="about__us">
       <div class="p-3 m-1">
-        <h2 class="fw-bold text-center">About Us</h2>
+        <h2 class="fw-bold text-center">About us</h2>
         <h6 class="text-center mt-0">Triple Helix Association</h6>
       </div>
 
@@ -123,7 +123,7 @@
           </p>
         </div>
         <div class="img__div4">
-          <img src="../assets/logo.webp" alt="" />
+          <img src="../assets/tha-logo.webp" alt="" />
         </div>
       </div>
     </div>

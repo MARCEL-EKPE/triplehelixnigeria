@@ -1,38 +1,30 @@
 <template>
   <div class="footer">
-    <section class="section__1 fw-bolder">
-      <div class="address">
-        <i class="bi bi-geo-alt-fill p-1" style="font-size: 1.25rem"></i>
-        <span class="fw-bold">Fidel Avenue</span> <br />
-        <span class="fw-bold p-3">Port-Harcourt, Nigeria</span>
+    <section class="footer__section">
+      <div class="container_content">
+        <button class="contact-btn">Contact us</button>
+        <div class="address icon">
+          <i class="bi bi-house-door-fill me-2" style="font-size: 1.25rem"></i>
+          <span>
+            Plot 76A Fiddil Avenue, off Ordinance Road, Trans Amadi Industrial
+            Layout, Port Harcourt, Nigeria.
+          </span>
+        </div>
+        <div class="phone icon">
+          <i class="bi bi-phone-fill" style="font-size: 1.25rem"></i>
+          <span> +234(0)8111113988, +234(0)8111113974</span>
+        </div>
+
+        <div class="email icon">
+          <i
+            class="bi bi-globe-asia-australia me-2"
+            style="font-size: 1.25rem"
+          ></i>
+          <span>www.triplehelixnigeria.com</span>
+        </div>
       </div>
-      <div class="phone">
-        <i class="bi bi-telephone-fill p-1" style="font-size: 1.25rem"></i>
-        <span class="fw-bold">+2347039631235</span>
-      </div>
-      <div class="mail">
-        <i
-          class="bi bi-envelope-fill"
-          style="font-size: 1.25rem; margin-left: 3px"
-        ></i>
-        <a href="#" class="text-decoration-none ps-2 fw-bold"
-          >thanigeia@company.com</a
-        >
-      </div>
-    </section>
-    <section class="section__2 fw-bolder">
-      <h5 class="fw-bold">THA Nigeria Chapter</h5>
-      <p class="fw-normal">
-        Nigeria, having fulfilled all the requirement to establish a chapter to
-        operationalize the Triple Helix Model, is the latest addition to the
-        league Triple Helix Chapter under the African region.
-      </p>
-      <div class="icons">
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"> <i class="bi bi-twitter"></i></a>
-        <a href="#"> <i class="bi bi-linkedin"></i></a>
-        <a href="#"> <i class="bi bi-github"></i></a>
-      </div>
+      <div class="null-div"></div>
+      <img src="../assets/Reineur slide.webp" alt="" class="footer-slide" />
     </section>
   </div>
 </template>
@@ -43,49 +35,53 @@ export default {};
 
 <style scoped>
 .footer {
-  height: 28rem;
+  height: 100%;
   width: 100%;
-  background-color: #2b352ff8;
+  margin: 4rem 0 1rem 0;
+}
+
+.footer__section {
+  height: 22rem;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container_content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0b0b27;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  flex-basis: 55%;
   color: #fff;
+  padding: 0 6rem 0 2rem;
+}
+.contact-btn {
+  height: 2.5rem;
+  width: 8rem;
+  background-color: #d1bc00fc;
+  border-radius: 0.6rem;
+  font-weight: bold;
+}
+.icon {
   padding: 1rem;
-  padding-top: 2rem;
-  display: flex;
-  justify-content: space-around;
 }
-
-.section__1 {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
+.null-div {
+  height: 100%;
+  width: 100%;
+  background-color: #b3e342;
+  flex-basis: 40%;
 }
-.section__2 {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-}
-.section__2 h5 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.icons .bi {
-  font-size: 1.25rem;
-  color: #fff;
-  margin: 1rem;
-}
-
-.address,
-.phone,
-.mail {
-  margin: 1rem;
-}
-@media screen and (max-width: 530px) {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.footer-slide {
+  height: 200px;
+  width: 300px;
+  position: absolute;
+  top: 70px;
+  right: 300px;
 }
 </style>

@@ -17,47 +17,13 @@
         </SwiperSlide>
       </Swiper>
     </div>
-    <!-- my content -->
-    <div class="welcome__tha">
-      <div class="msg">
-        <p class="tiplehelix">
-          <span class="red">TRIPLEHELIX ASSOCIATION</span>
-          <span class="green">NIGERIA CHAPTER</span>
-        </p>
-        <P class="text"
-          >Leveraging <span class="tha_model">Triple Helix Model</span> to
-          Accelerate the Commercialisation of Research & Innovation in
-          Nigeria</P
-        >
-        <button
-          class="btn"
-          href="#section3"
-          v-smooth-scroll="{ duration: 100 }"
-        >
-          &DownArrow; Learn more
-        </button>
-      </div>
-
-      <div class="msg-img-div">
-        <img
-          src="../assets/abt3.webp"
-          alt=""
-          class="welcome__img1"
-          ref="img1"
-        />
-        <img
-          src="../assets/abt4.webp"
-          alt=""
-          class="welcome__img2"
-          ref="img2"
-        />
-      </div>
-    </div>
-
-    <section class="home__content" id="section3">
-      <div class="who_we_are mt-2">
-        <div class="left">
-          <h4 class="fw-bold text-success display-6">who we are</h4>
+    <section class="home__content">
+      <div class="who_we_are">
+        <div class="wwa_img">
+          <img src="../assets/web4.webp" alt="" class="home_img" />
+        </div>
+        <div class="wwa_text">
+          <h4 class="fw-bold text-success">who we are</h4>
           <p>
             The Triple Helix Association (THA) is a global non-profit
             association that aims to harness the power of research and
@@ -70,33 +36,62 @@
             global visibility.
           </p>
         </div>
-        <div class="right">
-          <img src="../assets/w-w-a..webp" alt="" />
+      </div>
+      <div class="tha_nigeria">
+        <div class="tha_nigeria_text">
+          <h4 class="fw-bold text-success">
+            Triple Helix Association - Nigeria
+          </h4>
+          <p>
+            The Triple Helix Association - Nigeria (THN) chapter is a registered
+            member of the global triple helix association. The Nigerian chapter
+            was inaugurated December 01, 2022, as part of efforts to
+            operationalise the triple helix model to grow in-country excellence,
+            innovation, and entrepreneurial solutions to industry pain points
+            through the collaborative approach of the government, academia, and
+            industry. Triple Helix Association – Nigerian chapter aims to
+            achieve: 1. Develop critical industry expertise to drive in-country
+            innovation and fast-track national economic diversification. 2.
+            Identify strategic projects in critical sectors of national
+            importance, mobilise relevant resources from the academia, industry,
+            and government to execute them to global standards.
+          </p>
+        </div>
+        <div class="tha_nigeria_img">
+          <img src="../assets/web5.webp" alt="" class="home_img" />
         </div>
       </div>
-      <div class="tha_nigeria mt-3 p-3">
-        <h4 class="fw-bold text-center text-success display-6">
-          Triple Helix Association - Nigeria
+
+      <div class="tha_nigeria_aims">
+        <h4 class="fw-bold text-success header-text">
+          Triple Helix Association – Nigerian chapter aims to achieve:
         </h4>
-        <p>
-          The Triple Helix Association - Nigeria (THN) chapter is a registered
-          member of the global triple helix association. The Nigerian chapter
-          was inaugurated December 01, 2022, as part of efforts to
-          operationalise the triple helix model to grow in-country excellence,
-          innovation, and entrepreneurial solutions to industry pain points
-          through the collaborative approach of the government, academia, and
-          industry. Triple Helix Association – Nigerian chapter aims to achieve:
-          1. Develop critical industry expertise to drive in-country innovation
-          and fast-track national economic diversification. 2. Identify
-          strategic projects in critical sectors of national importance,
-          mobilise relevant resources from the academia, industry, and
-          government to execute them to global standards.
-        </p>
+        <div class="img_text_div">
+          <div class="img_text1">
+            <img src="../assets/web6.webp" alt="" class="hero" />
+            <div class="info">
+              <p>
+                Develop critical industry expertise to drive in-country
+                innovation and fasttrack national economic diversification.
+              </p>
+            </div>
+          </div>
+          <div class="img_text2">
+            <img src="../assets/web7.webp" alt="" class="hero" />
+            <div class="info">
+              <p>
+                Identify strategic projects in critical sectors of national
+                importance, mobilise relevant resources from the academia,
+                industry, and government to execute them to global standards.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="our__sponsors mt-3">
-        <h4 class="fw-bold text-center text-success display-6">our sponsors</h4>
-        <div class="img__sponsors">
+      <div class="our_sponsors">
+        <h4 class="fw-bold text-center text-success">our sponsors</h4>
+        <div class="img_sponsors">
           <img src="../assets/nuc.webp" alt="" />
           <img src="../assets/ccl-logo.webp" alt="" class="ccl-logo" />
           <img src="../assets/ncdmb.webp" alt="" />
@@ -114,7 +109,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const photos = ["slide1.webp", "slide2.webp", "slide3.webp"];
+const photos = ["web1.webp", "web2.webp", "web3.webp"];
 
 const img1 = ref("");
 const img2 = ref("");
@@ -135,159 +130,133 @@ onMounted(function () {
   height: 35rem;
   width: 100%;
 }
-
 .swiper {
+  padding: 3.125rem;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background: url("../assets/img3.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 .swiper-slide img {
+  padding: 3.125rem;
   height: 100%;
   width: 100%;
 }
-/* home-content */
-.welcome__tha {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 28rem;
-  background: url("../assets/wave.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.msg {
-  flex-basis: 50%;
-  margin: 2.5rem;
-}
-.msg-img-div {
-  flex-basis: 50%;
-}
-.tha_model {
-  font-weight: 700;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-.welcome__img1 {
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-  position: absolute;
-  top: 2rem;
-  right: 18rem;
-}
-.welcome__img2 {
-  width: 350px;
-  height: 250px;
-  border-radius: 20px;
-  position: absolute;
-  top: 10rem;
-  right: 5rem;
-}
-
-.tiplehelix {
-  font-weight: 900;
-  color: #fff;
-}
-.red,
-.green {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 20px;
-  width: 100%;
-  padding: 8px;
-}
-.red {
-  background-color: #dc2626;
-}
-.green {
-  background-color: #16a34a;
-}
-.text {
-  font-size: 25px;
-  line-height: 2rem;
-}
-.tha_model {
-  font-size: 25px;
-  font-weight: 900;
-  line-height: 20px;
-}
-.btn {
-  background-color: none;
-  font-weight: bold;
-  color: #fff;
-  background-image: linear-gradient(230deg, #cbb260, #788d63);
-}
-
-/* who we are */
 .home__content {
-  height: 55rem;
+  margin-top: 1rem;
+  height: 100%;
   width: 100%;
-  padding: 2rem;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_img {
+  height: 320px;
+  width: 320px;
 }
 .who_we_are {
-  margin-top: 1rem;
-  padding: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 4rem 6rem 0 6rem;
 }
-.left {
-  flex-basis: 70%;
+.wwa_img {
+  flex-basis: 50%;
+  padding-left: 3rem;
 }
-.right {
-  flex-basis: 30%;
-}
-.right img {
-  height: 250px;
-  width: 300px;
+
+.wwa_text {
+  flex-basis: 50%;
+  padding-right: 3rem;
 }
 .tha_nigeria {
-  background: url("../assets/flag.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.img__sponsors {
-  height: 12rem;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 4rem 6rem 0 6rem;
 }
-.our__sponsors img {
-  width: 150px;
+.tha_nigeria_text {
+  flex-basis: 50%;
+  padding-left: 3rem;
+}
+.tha_nigeria_img {
+  flex-basis: 50%;
+  padding-left: 5rem;
+}
+
+.tha_nigeria_aims {
+  height: 40rem;
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  margin: 4rem;
+  padding: 3rem;
+}
+.img_text_div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  height: 300px;
+  width: 400px;
+}
+.img_text1 {
+  height: 432px;
+  width: 400px;
+  margin: 3rem;
+  box-shadow: -3px 5px 5px grey;
+}
+.img_text2 {
+  height: 432px;
+  width: 400px;
+  margin: 3rem;
+  box-shadow: -3px 5px 5px grey;
+}
+.info {
+  background-color: #fff;
+  height: 130px;
+  width: 400px;
+  padding: 1rem;
+}
+.our_sponsors {
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img_sponsors {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.img_sponsors img {
   height: 150px;
+  width: 150px;
 }
-.our__sponsors .ccl-logo {
-  width: 300px;
+.img_sponsors .ccl-logo {
   height: 50px;
+  width: 200px;
 }
-/* binding classes */
-
-.move_y {
-  transform: translate(0px, 20px);
-  transition: 3s;
+h4 {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.move_x {
-  transform: translate(20px, 0px);
-  transition: 3s;
-}
-
-.moveOppy {
-  transform: translate(0px, -20px);
-  transition: 3s;
-}
-
-.moveOppx {
-  transform: translate(-20px, 0px);
-  transition: 3s;
-}
-
-@media screen and (max-width: 1175px) {
+/* @media screen and (max-width: 1175px) {
   .welcome__tha {
     display: flex;
     justify-content: center;
@@ -376,5 +345,12 @@ onMounted(function () {
   .home__content {
     height: 105rem;
   }
-}
+} */
+/* <button
+class="btn"
+href="#section3"
+v-smooth-scroll="{ duration: 100 }"
+>
+&DownArrow; Learn more
+</button> */
 </style>

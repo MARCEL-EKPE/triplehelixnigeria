@@ -1,27 +1,14 @@
 <template>
   <div class="nav" ref="nav">
-    <div class="logo">
+    <div class="div_logo">
       <img
-        src="../assets/logo.webp"
+        src="../assets/tha-logo.webp"
         alt=""
         @click="homeView"
         class="tha_logo"
       />
     </div>
-    <div class="nav_search_div position-relative" ref="nav">
-      <div class="input-group p-3 position-absolute top-0 end-0">
-        <input
-          type="search"
-          class="form-control border border-success"
-          placeholder="Search"
-          aria-label="Search"
-          aria-describedby="search-addon"
-        />
-        <span class="input-group-text border border-success" id="search-addon">
-          <i class="bi bi-search"></i>
-        </span>
-      </div>
-
+    <div class="nav_div position-relative">
       <ul class="nav__links">
         <router-link to="/about-us" class="link">About</router-link>
         <router-link to="/actors" class="link">T-H-N Actors</router-link>
@@ -29,9 +16,8 @@
           >Patents/Publications</router-link
         >
         <router-link to="/events" class="link">Events</router-link>
-        <router-link to="/contact-us" class="link contact"
-          >Contact Us</router-link
-        >
+        <router-link to="/contact-us" class="link">Contact Us</router-link>
+        <i class="bi bi-search"></i>
       </ul>
     </div>
     <div class="bars" ref="bars" @click="clickHandler">
@@ -63,40 +49,34 @@ function clickHandler() {
 <style scoped>
 .nav {
   display: flex;
-  position: relative;
   align-content: center;
   justify-content: space-around;
-  padding: 0.5rem;
-  height: 9rem;
+  position: relative;
+  height: 7.5rem;
   width: 100%;
-  margin: auto;
+  background-color: #0b0b27;
 }
-.logo {
-  flex-basis: 30%;
-}
-.logo h3 {
-  font-weight: 900;
+.div_logo {
+  flex-basis: 50%;
+  padding-left: 4rem;
 }
 .tha_logo {
-  width: 150px;
-  margin-left: 10px;
-  background-color: #fff;
+  height: 100px;
+  width: 120px;
 }
-.nav_search_div {
-  flex-basis: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.nav_div {
+  flex-basis: 50%;
+  position: relative;
 }
 .nav__links {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-content: center;
   list-style-type: none;
   position: absolute;
-  top: 5.8rem;
-  right: 0;
-  width: 70%;
+  top: 3.125rem;
+  right: 1rem;
 }
 .link {
   text-decoration: none;
@@ -104,30 +84,15 @@ function clickHandler() {
   font-weight: 700;
   color: #fff;
 }
-.link:hover {
-  font-size: 1.025rem;
+.nav__links .bi {
+  font-size: 1.25rem;
+  color: #fff;
 }
-
-.input-group-text:hover {
-  background-color: #788249;
-}
-.input-group-text,
-i {
+.link,
+.bi:hover {
   cursor: pointer;
 }
 
-.contact {
-  background-image: linear-gradient(230deg, #cbb260, #788d63);
-  border-radius: 10px;
-  padding: 3px;
-}
-.input-group {
-  width: 21rem;
-  margin-left: 2rem;
-}
-.form-control {
-  height: 2.8rem;
-}
 .bars {
   height: 30px;
   width: 40px;
@@ -142,30 +107,16 @@ i {
   margin: 8px;
 }
 /* navigation on small screen */
-.diplay-none {
-  background-color: #000000;
+@media screen and (max-width: 1300px) {
+  .div_logo {
+    flex-basis: 30%;
+  }
+  .nav_div {
+    flex-basis: 70%;
+  }
 }
-.display-block {
-  display: block;
-}
-@media screen and (max-width: 1100px) {
-  .nav {
-    height: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .nav_search_div {
-    display: none;
-  }
-  .logo {
-    flex-basis: 75%;
-  }
-  .tha_logo {
-    height: 5rem;
-    width: 7rem;
-  }
-  .bars {
+@media screen and (max-width: 700px) {
+  /* .bars {
     display: block;
     flex-basis: 25%;
     margin-bottom: 1rem;
@@ -176,7 +127,7 @@ i {
     width: 35px;
     height: 3px;
     margin: 5px;
-  }
+  } */
 }
 
 @media screen and (max-width: 650px) {
@@ -187,8 +138,6 @@ i {
     flex-basis: 78%;
   }
   .tha_logo {
-    height: 4.5rem;
-    width: 5rem;
   }
   .bars {
     display: block;

@@ -26,9 +26,6 @@ export default {
 body {
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
-  background-image: url("./assets/tha-bg1.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 #app {
