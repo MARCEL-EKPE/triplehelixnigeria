@@ -92,8 +92,8 @@ function homeView() {
 .one,
 .two,
 .three {
-  height: 5px;
-  width: 40px;
+  height: 3px;
+  width: 30px;
   background-color: #fff;
   margin: 8px;
 }
@@ -124,7 +124,11 @@ function homeView() {
   }
   .div_logo {
     flex-basis: 50%;
-    padding-left: 2rem;
+    padding-left: 0rem;
+  }
+  .tha_logo {
+    height: 80px;
+    width: 90px;
   }
 }
 /* @media screen and (max-width: 650px) {
