@@ -343,7 +343,7 @@ h4 {
 }
 @media screen and (max-width: 730px) {
   .img_sponsors img {
-    height: 70px;
+    height: 75px;
     width: 90px;
   }
   .img_sponsors .ccl-logo {
