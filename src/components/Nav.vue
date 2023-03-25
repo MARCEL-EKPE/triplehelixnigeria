@@ -1,5 +1,5 @@
 <template>
-  <div class="nav" ref="nav">
+  <div class="nav" ref="nav" id="nav">
     <div class="div_logo">
       <img
         src="../assets/tha-logo.webp"
@@ -20,9 +20,9 @@
         <i class="bi bi-search"></i>
       </ul>
     </div>
-    <div class="bars" ref="bars" @click="clickHandler">
+    <div class="bars" ref="bars">
       <div class="one"></div>
-      <div class="two display-none" ref="two"></div>
+      <div class="two"></div>
       <div class="three"></div>
     </div>
   </div>
@@ -34,15 +34,6 @@ import { ref, onMounted } from "vue";
 
 function homeView() {
   router.push("/");
-}
-
-const nav = ref(null);
-const bars = ref(null);
-const two = ref(null);
-
-function clickHandler() {
-  two.value.classList.add("display-none");
-  console.log("clicked");
 }
 </script>
 
@@ -106,8 +97,16 @@ function clickHandler() {
   background-color: #fff;
   margin: 8px;
 }
-/* navigation on small screen */
-@media screen and (max-width: 1300px) {
+
+@media screen and (max-width: 1100px) {
+  .div_logo {
+    flex-basis: 40%;
+  }
+  .nav_div {
+    flex-basis: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
   .div_logo {
     flex-basis: 30%;
   }
@@ -115,30 +114,20 @@ function clickHandler() {
     flex-basis: 70%;
   }
 }
-@media screen and (max-width: 700px) {
-  /* .bars {
+@media screen and (max-width: 720px) {
+  .nav_div {
+    display: none;
+  }
+  .bars {
     display: block;
-    flex-basis: 25%;
-    margin-bottom: 1rem;
+    margin-top: 1.25rem;
   }
-  .one,
-  .two,
-  .three {
-    width: 35px;
-    height: 3px;
-    margin: 5px;
-  } */
+  .div_logo {
+    flex-basis: 50%;
+    padding-left: 2rem;
+  }
 }
-
-@media screen and (max-width: 650px) {
-  .nav {
-    height: 6rem;
-  }
-  .logo {
-    flex-basis: 78%;
-  }
-  .tha_logo {
-  }
+/* @media screen and (max-width: 650px) {
   .bars {
     display: block;
     flex-basis: 22%;
@@ -152,5 +141,5 @@ function clickHandler() {
     height: 3px;
     margin: 8px;
   }
-}
+} */
 </style>

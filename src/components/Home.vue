@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <div class="slider">
       <Swiper
         :slides-per-view="1"
@@ -90,7 +90,7 @@
       </div>
 
       <div class="our_sponsors">
-        <h4 class="fw-bold text-center text-success">our sponsors</h4>
+        <h4 class="fw-bold text-center text-success">Our sponsors</h4>
         <div class="img_sponsors">
           <img src="../assets/nuc.webp" alt="" />
           <img src="../assets/ccl-logo.webp" alt="" class="ccl-logo" />
@@ -113,12 +113,16 @@ const photos = ["web1.webp", "web2.webp", "web3.webp"];
 </script>
 
 <style scoped>
+.home {
+  padding: 0;
+  margin: 0;
+}
 .slider {
   height: 35rem;
   width: 100%;
 }
 .swiper {
-  padding: 3.125rem;
+  padding: 3rem;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -127,7 +131,6 @@ const photos = ["web1.webp", "web2.webp", "web3.webp"];
   background-size: cover;
 }
 .swiper-slide img {
-  padding: 2rem;
   height: 100%;
   width: 100%;
 }
@@ -152,13 +155,11 @@ const photos = ["web1.webp", "web2.webp", "web3.webp"];
   padding: 4rem 6rem 0 6rem;
 }
 .wwa_img {
-  flex-basis: 50%;
   padding-left: 3rem;
 }
 
 .wwa_text {
-  flex-basis: 50%;
-  padding-right: 3rem;
+  padding: 0 4rem 0 5rem;
 }
 .tha_nigeria {
   display: flex;
@@ -167,12 +168,10 @@ const photos = ["web1.webp", "web2.webp", "web3.webp"];
   padding: 4rem 6rem 0 6rem;
 }
 .tha_nigeria_text {
-  flex-basis: 50%;
-  padding-left: 3rem;
+  padding: 0 5rem 0 2rem;
 }
 .tha_nigeria_img {
-  flex-basis: 50%;
-  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .tha_nigeria_aims {
@@ -183,7 +182,7 @@ const photos = ["web1.webp", "web2.webp", "web3.webp"];
   justify-content: center;
   align-items: center;
   background-color: #e0e0e0;
-  margin: 4rem;
+  margin: 4rem 4rem;
   padding: 3rem;
 }
 .img_text_div {
@@ -243,96 +242,145 @@ h4 {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/* @media screen and (max-width: 1175px) {
-  .welcome__tha {
-    display: flex;
-    justify-content: center;
+@media screen and (max-width: 1145px) {
+  .who_we_are {
+    padding: 4rem 1rem 0 1rem;
   }
-  .msg {
-    margin-left: 1rem;
-    flex-basis: 40%;
+  .wwa_img {
+    padding-left: 2rem;
   }
-  .msg-img-div {
-    margin-left: 2rem;
+
+  .wwa_text {
+    padding: 0 2rem 0 3rem;
+  }
+  .tha_nigeria {
+    padding: 4rem 1rem 0 1rem;
+  }
+  .tha_nigeria_text {
+    padding: 0 2rem 0 2rem;
+  }
+  .tha_nigeria_img {
+    padding-right: 2rem;
+  }
+  .tha_nigeria_aims {
+    height: 100%;
+    width: 100%;
+    margin: 4rem 0rem;
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
+  .slider {
+    height: 30rem;
+    width: 100%;
+  }
+  .swiper {
+    padding: 2rem;
+  }
+
+  .hero {
+    height: 200px;
+    width: 300px;
+  }
+  .img_text1 {
+    height: 358px;
+    width: 300px;
+    margin: 3rem;
+    box-shadow: -3px 5px 5px grey;
+  }
+  .img_text2 {
+    height: 358px;
+    width: 300px;
+    margin: 3rem;
+    box-shadow: -3px 5px 5px grey;
+  }
+  .info {
+    background-color: #fff;
+    height: 157px;
+    width: 300px;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 875px) {
   .slider {
     height: 25rem;
     width: 100%;
   }
-  .welcome__tha {
-    height: 22rem;
-    width: 100%;
+  .who_we_are {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 3rem 0 3rem;
+  }
+  .tha_nigeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 3rem 0 3rem;
+  }
+}
+@media screen and (max-width: 730px) {
+  .img_text_div {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
   }
-  .welcome__img1,
-  .welcome__img2 {
-    display: none;
+  .img_text1,
+  .img_text2 {
+    margin: 0.5rem;
   }
-
-  .home__content {
-    height: 73rem;
-    padding: 1rem;
+  .img_sponsors img {
+    height: 100px;
+    width: 100px;
   }
-  .who_we_are {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  .who_we_are .right {
-    flex-basis: 100%;
-  }
-  .who_we_are .right img {
-    width: 100%;
-  }
-  .img__sponsors {
-    height: 8rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .img__sponsors img {
-    width: 4rem;
-    height: 4rem;
-  }
-  .img__sponsors .ccl-logo {
-    width: 7rem;
-    height: 1.5rem;
+  .img_sponsors .ccl-logo {
+    height: 35px;
+    width: 100px;
   }
 }
-@media screen and (max-width: 650px) {
-  .silder {
-    height: 22rem;
-    width: 100%;
+@media screen and (max-width: 730px) {
+  .img_sponsors img {
+    height: 70px;
+    width: 90px;
   }
-  .home__content {
-    height: 80rem;
-  }
-  .who_we_are {
-    margin: 0;
-  }
-  .img__sponsors {
-    margin: 0;
-    height: 8rem;
+  .img_sponsors .ccl-logo {
+    height: 35px;
+    width: 90px;
   }
 }
+@media screen and (max-width: 450px) {
+  .home_img {
+    height: 250px;
+    width: 250px;
+  }
+  .who_we_are {
+    padding: 4rem 1rem 0 1rem;
+  }
+  .wwa_img {
+    padding-left: 1rem;
+  }
 
-@media screen and (max-width: 480px) {
-  .silder {
-    height: 11rem;
+  .wwa_text {
+    padding: 0 1rem 0 1rem;
+  }
+  .tha_nigeria {
+    padding: 4rem 1rem 0 1rem;
+  }
+  .tha_nigeria_text {
+    padding: 0 1rem 0 1rem;
+  }
+  .tha_nigeria_img {
+    padding-right: 0rem;
+  }
+
+  .slider {
+    height: 20rem;
     width: 100%;
   }
-  .home__content {
-    height: 105rem;
-  }
-} */
+}
 /* <button
 class="btn"
 href="#section3"

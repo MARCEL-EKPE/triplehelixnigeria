@@ -2,7 +2,14 @@
   <div class="footer">
     <section class="footer__section">
       <div class="container_content">
-        <button class="contact-btn">Contact us</button>
+        <button
+          class="contact-btn"
+          @click="goTo"
+          href="#nav"
+          v-smooth-scroll="{ duration: 100 }"
+        >
+          Contact us
+        </button>
         <div class="address icon">
           <i class="bi bi-house-door-fill me-2" style="font-size: 1.25rem"></i>
           <span>
@@ -29,8 +36,13 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import router from "../router";
+import { ref } from "vue";
+
+function goTo() {
+  router.push("/contact-us");
+}
 </script>
 
 <style scoped>
@@ -83,5 +95,29 @@ export default {};
   position: absolute;
   top: 70px;
   right: 300px;
+}
+@media screen and (max-width: 1212px) {
+  .footer-slide {
+    top: 70px;
+    right: 180px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .footer__section {
+    width: 100%;
+  }
+  .container_content {
+    padding: 0.5rem;
+    flex-basis: 100%;
+  }
+  .footer-slide {
+    display: none;
+  }
+  .null-div {
+    display: none;
+  }
+  .footer {
+    margin: 4rem 0 0 0;
+  }
 }
 </style>
