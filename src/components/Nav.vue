@@ -120,7 +120,7 @@ function homeView() {
   }
   .bars {
     display: block;
-    margin-top: 1.25rem;
+    margin-top: 0.7rem;
   }
   .div_logo {
     flex-basis: 50%;
