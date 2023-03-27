@@ -142,7 +142,7 @@ function showMenu() {
   }
   .menu {
     display: block;
-    margin-top: 0.7rem;
+    margin-top: 0.4rem;
     z-index: 99;
   }
   .div_logo {
