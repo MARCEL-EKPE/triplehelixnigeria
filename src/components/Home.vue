@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Nav />
     <div class="slider">
       <Swiper
         :slides-per-view="1"
@@ -98,10 +99,13 @@
         </div>
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script setup>
+import Nav from "../components/Nav.vue";
+import Footer from "../components/Footer.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { ref, onMounted } from "vue";

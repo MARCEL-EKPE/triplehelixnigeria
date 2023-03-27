@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Nav />
     <div class="section__1">
       <h1 class="display-3 fw-bold text-success text-center">
         Patent and Publications
@@ -10,11 +11,13 @@
         </h4>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import Nav from "../components/Nav.vue";
+import Footer from "../components/Footer.vue";
 </script>
 
 <style scoped>

@@ -1,19 +1,12 @@
 <template>
-  <div>
-    <Nav />
+  <div class="app">
     <router-view />
-    <Footer />
   </div>
 </template>
 
-<script>
-import Nav from "./components/Nav.vue";
-import Footer from "./components/Footer.vue";
-
-export default {
-  name: "App",
-  components: { Nav, Footer },
-};
+<script setup>
+import { ref } from "vue";
+const boo = ref(false);
 </script>
 
 <style>

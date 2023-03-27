@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Nav />
     <div class="about__us">
       <div class="p-3 m-1">
         <h2 class="fw-bold text-center">About us</h2>
@@ -127,11 +128,13 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import Nav from "../components/Nav.vue";
+import Footer from "../components/Footer.vue";
 </script>
 
 <style scoped>
