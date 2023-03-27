@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Sidebar v-if="bool" />
+    <Sidebar v-if="bool" @click="closeSidebar" />
 
     <div class="nav" ref="nav" id="nav">
       <div class="div_logo">
@@ -60,6 +60,11 @@ function showMenu() {
   }
   open.value.classList.toggle("none");
   close.value.classList.toggle("none");
+}
+function closeSidebar() {
+  bool.value = false;
+  open.value.classList.remove("none");
+  close.value.classList.add("none");
 }
 </script>
 

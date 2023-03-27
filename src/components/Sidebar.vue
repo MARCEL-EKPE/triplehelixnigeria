@@ -39,6 +39,7 @@ function removeOverlay() {
 } */
 aside {
   color: #fff;
+  /* background-color: #0b0b27; */
   background-color: #0b0b27;
   padding: 1rem;
   min-width: 300px;
