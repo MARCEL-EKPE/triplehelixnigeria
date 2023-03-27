@@ -143,6 +143,7 @@ function showMenu() {
   .menu {
     display: block;
     margin-top: 0.7rem;
+    z-index: 99;
   }
   .div_logo {
     flex-basis: 50%;

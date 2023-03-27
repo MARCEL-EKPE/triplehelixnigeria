@@ -10,7 +10,7 @@
           >Patents/Publications</router-link
         >
         <router-link to="/events" class="link">Events</router-link>
-        <router-link to="/contact-us" class="link">Contact Us</router-link>
+        <router-link to="/contact-us" class="link">Contact us</router-link>
         <!-- <i class="bi bi-search"></i> -->
       </ul>
     </aside>
