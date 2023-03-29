@@ -64,6 +64,7 @@ function showMenu() {
   }
   open.value.classList.toggle("none");
   close.value.classList.toggle("none");
+  document.body.style.overflow = "hidden";
 }
 function closeSidebar() {
   bool.value = false;
