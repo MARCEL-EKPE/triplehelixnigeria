@@ -70,6 +70,7 @@ function closeSidebar() {
   bool.value = false;
   open.value.classList.remove("none");
   close.value.classList.add("none");
+  document.body.style.overflow = "scroll";
 }
 
 onMounted(() => {
