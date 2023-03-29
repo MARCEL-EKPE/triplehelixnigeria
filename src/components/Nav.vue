@@ -27,11 +27,13 @@
       </div>
       <div class="menu" ref="menu" @click="showMenu">
         <i
+          @click="addHidden"
           class="bi bi-list"
           style="font-size: 1.8rem; color: #fff"
           ref="open"
         ></i>
         <i
+          @click="removeHidden"
           class="bi bi-x none"
           style="font-size: 2rem; color: #fff"
           ref="close"
@@ -64,13 +66,18 @@ function showMenu() {
   }
   open.value.classList.toggle("none");
   close.value.classList.toggle("none");
-  document.body.style.overflow = "hidden";
 }
 function closeSidebar() {
   bool.value = false;
   open.value.classList.remove("none");
   close.value.classList.add("none");
-  document.body.style.overflow = "scroll";
+  removeHidden();
+}
+function addHidden() {
+  document.body.style.overflow = "hidden";
+}
+function removeHidden() {
+  document.body.style.overflow = "";
 }
 
 onMounted(() => {
