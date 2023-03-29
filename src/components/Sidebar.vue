@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <div class="overlay" @click="removeOverlay" ref="overlay"></div> -->
     <aside>
       <ul class="nav__links">
         <router-link to="/" class="link">Home</router-link>
@@ -14,16 +13,12 @@
         <!-- <i class="bi bi-search"></i> -->
       </ul>
     </aside>
+    <div class="overlay"></div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-const overlay = ref("overlay");
-
-function removeOverlay() {
-  console.log(overlay.value);
-}
 </script>
 
 <style scoped>
@@ -39,7 +34,6 @@ function removeOverlay() {
 } */
 aside {
   color: #fff;
-  /* background-color: #0b0b27; */
   background-color: #0b0b27;
   padding: 1rem;
   min-width: 300px;
@@ -53,11 +47,27 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 100%;
+  width: 100%;
 }
 .link {
   text-decoration: none;
-  padding: 1rem;
+  padding: 1.3rem;
   color: #fff;
   font-weight: bold;
+}
+/* .link:nth-child(odd) {
+  background: #161622;
+  width: 100%;
+} */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  backdrop-filter: blur(1.5px);
+  z-index: 5;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Sidebar v-if="bool" @click="closeSidebar" />
+    <div class="backdrop">
+      <Sidebar v-if="bool" @click="closeSidebar" />
+    </div>
 
     <div class="nav" ref="nav" id="nav">
       <div class="div_logo">
@@ -12,7 +14,7 @@
         />
       </div>
       <div class="nav_div position-relative">
-        <ul class="nav__links">
+        <ul class="nav__links" ref="navLinks">
           <router-link to="/about-us" class="link">About</router-link>
           <router-link to="/actors" class="link">T-H-N Actors</router-link>
           <router-link to="/patent-publication" class="link"
@@ -51,7 +53,9 @@ const bool = ref(false);
 const menu = ref(null);
 const open = ref(null);
 const close = ref(null);
+const navLinks = ref(null);
 
+// open menu hamburger menu bar
 function showMenu() {
   if (bool.value == false) {
     bool.value = true;
@@ -66,6 +70,19 @@ function closeSidebar() {
   open.value.classList.remove("none");
   close.value.classList.add("none");
 }
+
+onMounted(() => {
+  const links = navLinks.value.childNodes;
+  links.forEach((link) => {
+    link.onmouseover = function () {
+      this.classList.add("borderline");
+    };
+    link.onmouseleave = function () {
+      this.classList.remove("borderline");
+    };
+  });
+});
+// [...navLinks.value.children];
 </script>
 
 <style scoped>
@@ -119,12 +136,17 @@ function closeSidebar() {
   height: 30px;
   width: 40px;
   display: none;
+  text-align: center;
 }
 
 .none {
   display: none;
 }
-
+.borderline {
+  border-bottom: 2px solid #99d639;
+  transition: 5ms ease-out;
+  padding: 0.7px;
+}
 @media screen and (max-width: 1100px) {
   .div_logo {
     flex-basis: 40%;
