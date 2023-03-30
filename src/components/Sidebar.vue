@@ -2,14 +2,50 @@
   <div>
     <aside>
       <ul class="nav__links">
-        <router-link to="/" class="link">Home</router-link>
-        <router-link to="/about-us" class="link">About</router-link>
-        <router-link to="/actors" class="link">T-H-N Actors</router-link>
-        <router-link to="/patent-publication" class="link"
-          >Patents/Publications</router-link
-        >
-        <router-link to="/events" class="link">Events</router-link>
-        <router-link to="/contact-us" class="link">Contact us</router-link>
+        <div class="icon_link">
+          <i
+            class="bi bi-house-door-fill"
+            style="font-size: 1.5rem; padding-left: 10px; color: #fff"
+          ></i>
+          <router-link to="/" class="link">Home</router-link>
+        </div>
+        <div class="icon_link">
+          <i
+            class="bi bi-question-circle-fill"
+            style="font-size: 1.5rem; padding-left: 10px; color: #fff"
+          ></i>
+          <router-link to="/about-us" class="link">About</router-link>
+        </div>
+        <div class="icon_link">
+          <i
+            class="bi bi-people-fill"
+            style="font-size: 1.5rem; padding-left: 10px; color: #fff"
+          ></i>
+          <router-link to="/actors" class="link">T-H-N Actors</router-link>
+        </div>
+        <div class="icon_link">
+          <i
+            class="bi bi-journal"
+            style="font-size: 1.5rem; padding-left: 10px; color: #fff"
+          ></i>
+          <router-link to="/patent-publication" class="link"
+            >Patents/Publications</router-link
+          >
+        </div>
+        <div class="icon_link">
+          <i
+            class="bi bi-calendar-event-fill"
+            style="font-size: 1.5rem; padding-left: 10px; color: #fff"
+          ></i>
+          <router-link to="/events" class="link">Events</router-link>
+        </div>
+        <div class="icon_link">
+          <i
+            class="bi bi-inboxes-fill"
+            style="font-size: 1.5rem; padding-left: 10px; color: #fff"
+          ></i>
+          <router-link to="/contact-us" class="link">Contact us</router-link>
+        </div>
         <!-- <i class="bi bi-search"></i> -->
       </ul>
     </aside>
@@ -39,27 +75,38 @@ aside {
   min-width: 300px;
   overflow: hidden;
   min-height: 100vh;
-  transition: 0.4s ease-out;
+  transition: 2s ease-out;
   position: fixed;
   z-index: 99;
 }
 .nav__links {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100%;
+  align-items: start;
+  height: 70vh;
+}
+.icon_link {
+  height: 45px;
   width: 100%;
+  padding: 5px;
+  text-align: start;
+  border-radius: 20px;
+  position: relative;
 }
 .link {
   text-decoration: none;
-  padding: 1.3rem;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0 0px 32px;
+  position: absolute;
+  top: 12px;
 }
-/* .link:nth-child(odd) {
-  background: #161622;
-  width: 100%;
-} */
+.icon_link:hover {
+  background-color: rgb(40, 45, 65);
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -67,7 +114,7 @@ aside {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1px);
   z-index: 5;
 }
 </style>
