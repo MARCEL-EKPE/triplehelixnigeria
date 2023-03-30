@@ -34,7 +34,7 @@
         </div>
         <div class="icon_link">
           <i
-            class="bi bi-calendar-event-fill"
+            class="bi bi-calendar-date-fill"
             style="font-size: 1.5rem; padding-left: 10px; color: #fff"
           ></i>
           <router-link to="/events" class="link">Events</router-link>
