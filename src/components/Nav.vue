@@ -153,7 +153,7 @@ onMounted(() => {
   display: none;
 }
 .borderline {
-  border-bottom: 2px solid #99d639;
+  border-bottom: 1.5px solid #99d639;
   transition: 5ms ease-out;
   padding: 0.7px;
 }
