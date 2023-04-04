@@ -41,7 +41,7 @@
         </div>
         <div class="icon_link">
           <i
-            class="bi bi-inboxes-fill"
+            class="bi bi-telephone-fill"
             style="font-size: 1.5rem; padding-left: 10px; color: #fff"
           ></i>
           <router-link to="/contact-us" class="link">Contact us</router-link>

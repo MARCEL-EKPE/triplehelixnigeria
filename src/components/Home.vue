@@ -4,12 +4,12 @@
     <div class="slider">
       <Swiper
         :slides-per-view="1"
-        :space-between="50"
+        :space-between="100"
         :pagination="{ clickable: true, dynamicBullets: true }"
         :modules="[Navigation, Pagination, Autoplay]"
         navigation
         :autoplay="{
-          delay: 3000,
+          delay: 4000,
           pauseOnMouseEnter: true,
         }"
       >
@@ -19,7 +19,7 @@
       </Swiper>
     </div>
     <section class="home__content">
-      <div class="who_we_are">
+      <div class="who_we_are" ref="wwa">
         <div class="wwa_img">
           <img src="../assets/web4.webp" alt="" class="home_img" />
         </div>
@@ -114,6 +114,22 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const photos = ["web1.webp", "web2.webp", "web3.webp"];
+
+const wwa = ref(null);
+onMounted(() => {
+  const obsCallback = function (entries, observer) {
+    entries.forEach((entry) => {
+      console.log(entry);
+    });
+  };
+
+  const obsOptions = {
+    root: null,
+    threshold: 0.2,
+  };
+  const observer = new IntersectionObserver(obsCallback, obsOptions);
+  observer.observe(wwa.value);
+});
 </script>
 
 <style scoped>

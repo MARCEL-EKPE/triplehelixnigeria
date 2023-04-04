@@ -111,6 +111,7 @@ onMounted(() => {
 .tha_logo {
   height: 100px;
   width: 120px;
+  cursor: pointer;
 }
 .nav_div {
   flex-basis: 50%;
