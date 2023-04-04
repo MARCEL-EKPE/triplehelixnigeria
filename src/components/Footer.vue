@@ -75,9 +75,10 @@ function goTo() {
 }
 .contact-btn {
   height: 2.5rem;
-  width: 8rem;
+  width: 6.5rem;
   background-color: #d1bc00fc;
   border-radius: 0.6rem;
+  border: none;
   font-weight: bold;
 }
 .icon {
