@@ -333,6 +333,9 @@ h4 {
     align-items: center;
     padding: 4rem 3rem 0 3rem;
   }
+  .wwa_text {
+    margin-top: 2rem;
+  }
   .tha_nigeria {
     display: flex;
     flex-direction: column;
